@@ -95,7 +95,9 @@ html{
 }
 
 @media only screen and (max-width: 990px){
-    
+    .Daily{
+        padding-top: 20px;
+    }
     .logout{
         position: relative;
         top: 40%;
