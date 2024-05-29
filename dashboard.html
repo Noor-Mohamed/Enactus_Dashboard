@@ -63,7 +63,7 @@
                             <i class="bi bi-clock yellow main_icons"></i>
                         </div>
                         <div class="row">
-                            <p class="main_number">120</p>
+                            <p class="main_number n1">120</p>
                         </div>
                         <div class="row">
                             <p>hours</p>
@@ -76,7 +76,7 @@
                             <i class="bi bi-exclamation-circle yellow main_icons"></i>
                         </div>
                         <div class="row">
-                            <p class="main_number">0</p>
+                            <p class="main_number n2">1</p>
                         </div>
                         <div class="row">
                            <p>warnings</p>
@@ -89,7 +89,7 @@
                             <i class="bi bi-list-check yellow main_icons"></i>
                         </div>
                         <div class="row">
-                            <p class="main_number">10</p>
+                            <p class="main_number n3">10</p>
                         </div>
                         <div class="row">
                             <p>tasks</p>
@@ -125,6 +125,13 @@
             </div>
         </div>
     </div>
+    <div class="circle1 animation4 c1"></div>
+    <div class="circle2 animation2 c2"></div>
+    <div class="circle3 animation3 c3"></div>
+    <div class="circle1 animation1 c4"></div>
+    <div class="circle3 animation3 c5"></div>
+    <div class="circle2 animation4 c6"></div>
+    <div class="circle3 animation2 c7"></div>
       
       <script>
       function w3_open() {
@@ -135,6 +142,76 @@
         document.getElementById("mySidebar").style.display = "none";
       }
       </script>
+
+    <script>
+        // JavaScript to increment the number from 0 to the target number
+        document.addEventListener('DOMContentLoaded', () => {
+            const numberElement = document.querySelector('.n1');
+            const targetNumber = parseInt(numberElement.textContent);
+            let currentNumber = 0;  // Start from 0
+            let incrementStep = 1;  // Define the increment step
+            let incrementInterval = 45;  // Define the interval in milliseconds
+
+            const incrementNumber = () => {
+                if (currentNumber < targetNumber) {
+                    currentNumber += incrementStep;
+                    if (currentNumber > targetNumber) {
+                        currentNumber = targetNumber;  // Ensure it doesn't go beyond target
+                    }
+                    numberElement.textContent = currentNumber;
+                    setTimeout(incrementNumber, incrementInterval);
+                }
+            };
+
+            incrementNumber();
+        });
+    </script>
+    <script>
+        // JavaScript to increment the number from 0 to the target number
+        document.addEventListener('DOMContentLoaded', () => {
+            const numberElement = document.querySelector('.n2');
+            const targetNumber = parseInt(numberElement.textContent);
+            let currentNumber = 0;  // Start from 0
+            let incrementStep = 1;  // Define the increment step
+            let incrementInterval = 600;  // Define the interval in milliseconds
+
+            const incrementNumber = () => {
+                if (currentNumber < targetNumber) {
+                    currentNumber += incrementStep;
+                    if (currentNumber > targetNumber) {
+                        currentNumber = targetNumber;  // Ensure it doesn't go beyond target
+                    }
+                    numberElement.textContent = currentNumber;
+                    setTimeout(incrementNumber, incrementInterval);
+                }
+            };
+
+            incrementNumber();
+        });
+    </script>
+    <script>
+        // JavaScript to increment the number from 0 to the target number
+        document.addEventListener('DOMContentLoaded', () => {
+            const numberElement = document.querySelector('.n3');
+            const targetNumber = parseInt(numberElement.textContent);
+            let currentNumber = 0;  // Start from 0
+            let incrementStep = 1;  // Define the increment step
+            let incrementInterval = 200;  // Define the interval in milliseconds
+
+            const incrementNumber = () => {
+                if (currentNumber < targetNumber) {
+                    currentNumber += incrementStep;
+                    if (currentNumber > targetNumber) {
+                        currentNumber = targetNumber;  // Ensure it doesn't go beyond target
+                    }
+                    numberElement.textContent = currentNumber;
+                    setTimeout(incrementNumber, incrementInterval);
+                }
+            };
+
+            incrementNumber();
+        });
+    </script>
 
     <script src="bootstrap/js/bootstrap.js"></script>
 </body>
