@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Lato', 'Arial', sans-serif;
+}
+
+.yellow{
+    color: #FEBF0F;
+}
+
+.up{
+    background-color: rgb(44, 44, 44);
+    color: white;
+    display: flex;
+}
+
+.side_nav{
+
+    color: white;
+}
+.enactus_logo{
+    width: 70%;
+}
+.navItem{
+    margin-top: 10px;
+}
+.logout{
+    position: relative;
+    top: 43%;
+}
+.profile{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 80%;
+    align-items: center;
+}
+.profile_pic{
+    height: 40px;
+    border-radius: 50%;
+}
+.profile_cont{
+    margin-left: 10%;
+}
+
+.Welcome{
+    padding: 10px;
+    margin-top: 50px;
+    margin-left: 20%;
+    border-radius: 20px;
+    background: rgb(37,37,37);
+    background: linear-gradient(270deg,rgba(37,37,37,1) 0%, rgba(42,42,42,1) 45%, rgba(14,14,14,1) 100%);
+}
+
+.enactus_logo2{
+    width: 100%;
+}
+.date{
+    opacity: 70%;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.Welcometext{
+    margin-top: 20px;
+    font-size: 200%;
+}
+.slogan{
+    opacity: 70%;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+}
+
+.main{
+    margin-top: 100px;
+    margin-left: 20%;
+}
+.main_icons{
+    font-size: 350%;
+}
+.maincont{
+    border-radius: 25px;
+    background-color: #636363;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.main_number{
+    font-size: 130%;
+}
+.dailycont{
+    font-size: 85%;
+}
+
+@media only screen and (max-width: 990px){
+    .profile{
+        margin-left: 70%;
+    }
+    .profile_cont{
+        margin-left: 5%;
+    }
+    .Welcome{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .enactus_logo2{
+        width: 40%;
+    }
+    .date{
+        font-size: 100%;
+    }
+    .Welcometext{
+        font-size: 150%;
+    }
+    .slogan{
+        font-size: 80%;
+    }
+    .main{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .dailycont{
+        font-size: 120%;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .profile{
+        margin-left: 40%;
+    }
+    .profile_cont{
+        margin-left: 1%;
+    }
+    .Welcome{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .enactus_logo2{
+        width: 70%;
+    }
+    .main{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
