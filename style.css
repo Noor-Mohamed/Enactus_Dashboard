@@ -134,7 +134,7 @@ html{
 @media only screen and (max-width: 480px){
     .logout{
         position: relative;
-        top: 35%;
+        top: 30%;
     }
     .profile{
         margin-left: 40%;
