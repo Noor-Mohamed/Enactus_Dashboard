@@ -13,61 +13,69 @@ html{
 }
 
 
-.footer3 li{
-    display: block;
-    padding: 0;
-    margin-top: 5px;
+.footer3{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
 }
 
-.navlinks ul {
+.footer3 ul{
     list-style: none;
+}
+
+.footer3 h5{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navlinks li{
+    display: block;
+    padding: 0;
+    margin-top: 10px;
 }
 
 
 .navlinks li a:link,
-.navlinks li a:visited {
-    padding: 5px 4px;
-    color: #fff;
+.navlinks li a:visited{
     text-decoration: none;
-    font-weight: 100;
+    color: rgb(255, 255, 255);
     font-size: 100%;
-    transition:  0.5s;
 }
 
-ul:hover li .navlink{
-    transform:scale(1.5);
-    opacity:0.9;
-    filter:blur(5px);
-  }
-  
-ul li .navlink:hover{
-    transform:scale(2);
-    opacity:1;
-    filter:blur(0);
-    text-decoration:none;
-    color:rgb(0, 0, 0);
-  }
-  
- ul li .navlink:before{
-    content:'';
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:#FEBF0F;
-    transition:0.5s;
-    transform-origin:right;
-    transform:scaleX(0);
-    z-index:-1;
-    border-radius: 10px;
-  }
-  
- ul li .navlink:hover:before{
-    transition:transform 0.5s;
-    transform-origin:left;
-    transform:scaleX(1);
-  }
+.navlinks li{
+    padding: 0;
+}
+
+.navlinks li a:after{
+    display:block;
+    content: '';
+    border-bottom: solid 1px #FEBF0F;  
+    transform: scaleX(0);  
+    transition: transform 0.2s ease-in-out;
+}
+
+.navlinks li .navlink1:hover:after{
+    transform: scaleX(0.5);
+}
+.navlinks li .navlink2:hover:after{
+    transform: scaleX(0.4);
+}
+.navlinks li .navlink3:hover:after{
+    transform: scaleX(0.6);
+}
+.navlinks li .navlink4:hover:after{
+    transform: scaleX(0.72);
+}
+.navlinks li .navlink5:hover:after{
+    transform: scaleX(0.3);
+}
+.navlinks li .navlink6:hover:after{
+    transform: scaleX(0.3);
+}
+
+.navlinks li a:after{
+    transform-origin:  0% 50%;
+}
 
 .up{
     background-color: rgb(44, 44, 44);
