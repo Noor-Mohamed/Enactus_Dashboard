@@ -13,9 +13,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body style="background-color: #3B3B3B; color: white;">
-    
     <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left side_nav" style="background: rgb(37,37,37);background: linear-gradient(rgba(37,37,37,1) 0%, rgba(42,42,42,1) 45%, rgba(14,14,14,1) 100%);" id="mySidebar">
-        <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+        <!-- <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button> -->
         <div>
             <img class="enactus_logo" src="imgs/enactus.png" alt="enactus">
         </div>
@@ -33,7 +32,7 @@
       
     <div class="w3-main">
         <div class="up">
-            <button class="up_button w3-button w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+            <button class="up_button w3-button w3-xlarge w3-hide-large" id="sidebarOpener">&#9776;</button>  
             <div class="profile">
                 <div class="profile_cont">
                     <p style="padding: 0; margin: 0;">Noor</p>
@@ -142,15 +141,29 @@
             <img src= "imgs/enactus.png"/> 
         </div> 
     </div>
-      
-      <script>
-      function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-      }
-      
-      function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-      }
+    <script>
+        /////////////////////////////////////////
+        //open and close sidebar
+        $(document).ready(function(){
+            $("#sidebarOpener").click(function(){
+                $("#mySidebar").toggle();
+            });
+    
+            $(document).mouseup(function(e) {
+                var container = $("#mySidebar");
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    container.hide();
+                }
+            });
+        });
+      function handleClickOutside(event) {
+            const sidebar = document.getElementById("mySidebar");
+            // If the click was outside the sidebar, close the sidebar
+            if (!sidebar.contains(event.target)) {
+                w3_close();
+            }
+        }
+        //////////////////////////////////////////////////////////////
         // JavaScript to increment the number from 0 to the target number
         document.addEventListener('DOMContentLoaded', () => {
             const numberElement = document.querySelector('.n1');
@@ -214,7 +227,8 @@
 
             incrementNumber();
         });
-
+        ///////////////////////////////////////////////////////////////
+        //loader////
         $(window).on("load", function(){
             setTimeout(function(){
                 $(".loader_warper").hide();
